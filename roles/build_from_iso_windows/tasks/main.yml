@@ -19,9 +19,16 @@
 - name: set defaults Server2019eval
   set_fact:
     version: "Server2019eval"
-    install_iso: "17763.737.190906-2324.rs5_release_svc_refresh_SERVER_EVAL_x64FRE_en-us_1.iso"
-    install_iso_url: "https://software-download.microsoft.com/download/pr/17763.737.190906-2324.rs5_release_svc_refresh_SERVER_EVAL_x64FRE_en-us_1.iso"
+    # install_iso: "17763.737.190906-2324.rs5_release_svc_refresh_SERVER_EVAL_x64FRE_en-us_1.iso"
+    install_iso: "17763.3650.221105-1748.rs5_release_svc_refresh_SERVER_EVAL_x64FRE_en-us.iso"
+    install_iso_url: "https://software-download.microsoft.com/download/pr/17763.3650.221105-1748.rs5_release_svc_refresh_SERVER_EVAL_x64FRE_en-us.iso"
   when: version|default(Server2019eval) == "Server2019eval"
+
+- name: set defaults Server2019Essentialseval
+  set_fact:
+    install_iso: "17763.737.190906-2324.rs5_release_svc_refresh_SERVERESSENTIALS_OEM_x64FRE_en-us_1.iso"
+    install_iso_url: "https://software-download.microsoft.com/download/pr/17763.737.190906-2324.rs5_release_svc_refresh_SERVERESSENTIALS_OEM_x64FRE_en-us_1.iso"
+  when: version == "Server2019Essentialseval"
 
 - name: set defaults Server2016eval
   set_fact:
