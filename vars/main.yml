@@ -1,7 +1,7 @@
 # If there is no vcenter, use the esxi host crendentials
 # to complete the vcenter variables
 vcenter_address: 192.168.7.121
-vcenter_username: administrator@vsphere.local
+vcenter_username: administrator@example.local
 vcenter_password: Netapp1!
 
 # # If there is no vcenter, use 'ha-datacenter'
@@ -9,20 +9,20 @@ vcenter_datacenter: Datacenter
 
 # Default cluster for new VM provisioning
 # if there is no cluster set it to ""
-vcenter_cluster: "ExampleLab"
+vcenter_cluster: ""
 cluster_hosts:
-  - 192.168.7.119
+  - 192.168.7.120
   
 
 # Credentials for a host with access to the datastore
 # Used when ISOs are missing from the ISO datastore
-esxi_address: 192.168.7.119
+esxi_address: 192.168.7.120
 esxi_username: root
 esxi_password: xqa-t33a
 
 # If there is a vcenter, this must match the host's name in vcenter inventory
 # if there is no vcenter, the name can be the IP address
-esxi_hostname: "192.168.7.119"
+esxi_hostname: "192.168.7.120"
 
 # Default datastore for new VMs
 vm_datastore: "datastore2"
@@ -31,7 +31,7 @@ vm_datastore: "datastore2"
 iso_datastore: "datastore2"
 
 # Default portgroup for new VMs
-vm_network: "DSwitch-VM Network"
+vm_network: "VM Network"
 
 # Default vswitch for new portgroups
 esxi_vswitch: "vSwitch1"
